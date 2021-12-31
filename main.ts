@@ -15,11 +15,8 @@ basic.forever(function () {
     if (ketnoi == 1) {
         if (pins.digitalReadPin(DigitalPin.P0) == 0) {
             datagui = convertToText(input.compassHeading())
-            bluetooth.uartWriteString(convertToText(input.compassHeading()))
-            basic.showIcon(IconNames.Heart)
-        } else {
             bluetooth.uartWriteString(datagui)
-            basic.showIcon(IconNames.Square)
+            basic.showIcon(IconNames.Heart)
         }
     }
 })
